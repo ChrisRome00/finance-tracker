@@ -21,3 +21,34 @@ h1 {
   color: #2c3e50;
   margin-bottom: 1.5rem;
 }
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.balance { color: #2c3e50; }
+.income { color: #27ae60; }
+.expenses { color: #e74c3c; }
