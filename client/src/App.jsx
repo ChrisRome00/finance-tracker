@@ -4,6 +4,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Dashboard from './components/Dashboard'
+import TransactionList from './components/TransactionList'
 
 function App() {
   // Props — data that comes from outside the component, read only
@@ -48,6 +49,7 @@ function App() {
         income={income}
         expenses={expenses}
       />
+      <TransactionList transactions={transactions} />
     </div>
   ) 
 
