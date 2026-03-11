@@ -7,12 +7,16 @@ function TransactionList({ transactions }){
         <>
             <div className="transaction-list">
                 <h2>Transactions</h2>
-                {transactions.map(t => (
-                    <div key={t.id} className={`transaction ${t.type}` }>
-                        <p>{t.description}</p>
-                        <p className="amount">${t.amount}</p>
-                    </div>
-                ))}
+                {transactions.length === 0 ? (
+                    <p className="empty">No Transactions yet!</p>
+                ) : (
+                    transactions.map(t => (
+                        <div key={t.id} className={`transaction ${t.type}` }>
+                            <p>{t.description}</p>
+                            <p className="amount">${t.amount}</p>
+                        </div>
+                    ))
+                )}
             </div>
         </>
     )

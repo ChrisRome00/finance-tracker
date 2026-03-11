@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/Header'
 import Dashboard from './components/Dashboard'
 import TransactionList from './components/TransactionList'
+import AddTransaction from './components/AddTransaction'
 
 function App() {
   // Props — data that comes from outside the component, read only
@@ -40,6 +41,10 @@ function App() {
 
     const balance = income - expenses
 
+    const handleAddTransaction = (newTransaction) => {
+      setTransactions([...transactions, newTransaction])
+    }
+
 
   return (
     <div className='app'>
@@ -49,6 +54,7 @@ function App() {
         income={income}
         expenses={expenses}
       />
+      <AddTransaction onAdd={handleAddTransaction} />
       <TransactionList transactions={transactions} />
     </div>
   ) 
