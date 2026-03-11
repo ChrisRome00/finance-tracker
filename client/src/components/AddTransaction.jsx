@@ -6,8 +6,8 @@ function AddTransaction({ onAdd }){
     const [type, setType] = useState('income')
 
     const handleSubmit = () => {
-        if(!description || !amount){
-            alert('Please fill in all fields')
+        if(!description || !amount || parseFloat(amount) <= 0){
+            alert('Please fill in all fields & enter a postive amount')
             return
         }
 
