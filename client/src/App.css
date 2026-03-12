@@ -96,3 +96,50 @@ h1 {
   text-align: center;
   padding: 1rem 0;
 }
+
+.add-transaction {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.add-transaction h2 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.add-transaction input,
+.add-transaction select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.add-transaction input:focus,
+.add-transaction select:focus {
+  border-color: #2c3e50;
+}
+
+.add-transaction button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #284d2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-transaction button:hover {
+  background: #164416;
+}
