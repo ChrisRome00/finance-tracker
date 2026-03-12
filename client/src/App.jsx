@@ -45,6 +45,10 @@ function App() {
       setTransactions([...transactions, newTransaction])
     }
 
+    const handleDeleteTransaction = (id) =>{
+      setTransactions(transactions.filter(t => t.id !== id))
+    }
+
 
   return (
     <div className='app'>
@@ -55,7 +59,7 @@ function App() {
         expenses={expenses}
       />
       <AddTransaction onAdd={handleAddTransaction} />
-      <TransactionList transactions={transactions} />
+      <TransactionList transactions={transactions} onDelete={handleDeleteTransaction}/>
     </div>
   ) 
 

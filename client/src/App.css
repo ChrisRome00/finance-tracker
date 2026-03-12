@@ -75,3 +75,24 @@ h1 {
 
 .transaction.income .amount { color: #27ae60; }
 .transaction.expense .amount { color: #e74c3c; }
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.delete-btn:hover {
+  background: #fde8e8;
+}
+
+.empty {
+  color: #888;
+  text-align: center;
+  padding: 1rem 0;
+}

@@ -2,7 +2,7 @@
 // .filter() — loops through, removes elements that don't match, returns smaller array
 // .reduce() — loops through, accumulates everything into one single value
 // .map() — loops through, transforms every element, returns same size array
-function TransactionList({ transactions }){
+function TransactionList({ transactions , onDelete }){
     return (
         <>
             <div className="transaction-list">
@@ -14,6 +14,10 @@ function TransactionList({ transactions }){
                         <div key={t.id} className={`transaction ${t.type}` }>
                             <p>{t.description}</p>
                             <p className="amount">${t.amount}</p>
+                            <button
+                                className="delete-btn"
+                                onClick={() => onDelete(t.id)}
+                            >X</button>
                         </div>
                     ))
                 )}
